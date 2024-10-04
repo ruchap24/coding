@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: rgb(176, 240, 240);
+        }
+
+        .board {
+            display: grid;
+            grid-template-columns: repeat(3, 100px);
+            gap: 5px;
+            margin-top: 20px;
+        }
+
+        .cell {
+            width: 100px;
+            height: 100px;
+            font-size: 24px;
+            border: 2px solid #0d0c0c;
+            cursor: pointer;
+            background-color: crimson;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tic-Tac-Toe</h1>
+    <div id="result"></div>
+    <div class="board" id="board">
+        <div class="cell" onclick="handleClick(0, 0)"></div>
+        <div class="cell" onclick="handleClick(0, 1)"></div>
+        <div class="cell" onclick="handleClick(0, 2)"></div>
+        <div class="cell" onclick="handleClick(1, 0)"></div>
+        <div class="cell" onclick="handleClick(1, 1)"></div>
+        <div class="cell" onclick="handleClick(1, 2)"></div>
+        <div class="cell" onclick="handleClick(2, 0)"></div>
+        <div class="cell" onclick="handleClick(2, 1)"></div>
+        <div class="cell" onclick="handleClick(2, 2)"></div>
+    </div>
+
+    <script>
+        let currentPlayer = 'X';
+        let gameBoard = [
+            ['', '', ''],
+            ['', '', ''],
+            ['', '', '']
+        ];
+
+        function handleClick(row, col) {
+            if (!gameBoard[row][col]) {
+                gameBoard[row][col] = currentPlayer;
+                updateBoard();
+                if (checkWinner()) {
+                    document.getElementById('result').innerText = `Player ${currentPlayer} wins!`;
+                    disableBoard();
+                } else if (isBoardFull()) {
+                    document.getElementById('result').innerText = "It's a draw!";
+                } else {
+                    currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
+                }
+            }
+        }
+
+        function updateBoard() {
+            const cells = document.getElementsByClassName('cell');
+            for (let i = 0; i < cells.length; i++) {
+                const row = Math.floor(i / 3);
+                const col = i % 3;
+                cells[i].innerText = gameBoard[row][col];
+            }
+        }
+
+        function checkWinner() {
+            // Check rows, columns, and diagonals for a winner
+            return checkLine(0, 0, 0, 1, 0, 2) ||
+                   checkLine(1, 0, 1, 1, 1, 2) ||
+                   checkLine(2, 0, 2, 1, 2, 2) ||
+                   checkLine(0, 0, 1, 0, 2, 0) ||
+                   checkLine(0, 1, 1, 1, 2, 1) ||
+                   checkLine(0, 2, 1, 2, 2, 2) ||
+                   checkLine(0, 0, 1, 1, 2, 2) ||
+                   checkLine(0, 2, 1, 1, 2, 0);
+        }
+
+        function checkLine(row1, col1, row2, col2, row3, col3) {
+            return (
+                gameBoard[row1][col1] === gameBoard[row2][col2] &&
+                gameBoard[row2][col2] === gameBoard[row3][col3] &&
+                gameBoard[row1][col1] !== ''
+            );
+        }
+
+        function isBoardFull() {
+            for (let row = 0; row < 3; row++) {
+                for (let col = 0; col < 3; col++) {
+                    if (gameBoard[row][col] === '') {
+                        return false;
+                    }
+                }
+            }
+            return true;
+        }
+
+        function disableBoard() {
+            const cells = document.getElementsByClassName('cell');
+            for (let i = 0; i < cells.length; i++) {
+                cells[i].onclick = null;
+            }
+        }
+    </script>
+</body>
+</html>

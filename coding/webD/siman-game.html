@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            text-align: center;
+            /* justify-content: center; */
+        }
+        .box{
+            border-radius: 2rem;
+            border: 8px solid black;
+            height:200px;
+            width: 200px;
+            margin:10px
+        }
+        .container{
+            display:flex;
+            justify-content:center;
+        }
+        /* .h{
+            display:flex;
+        }
+        .v{
+            display:flex;
+        } */
+        .a{
+            background-color: rgb(112, 15, 15);
+        }
+        .c{
+            background-color: rgb(63, 30, 184);
+        }
+        .d{
+            background-color: rgb(193, 206, 10);
+        }
+        .b{
+            background-color: rgb(161, 13, 134);
+        }
+        .flash{
+            background-color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        simon says game started
+    </h1>
+    <h3>press any key to start the game </h3>
+    <div class="container">
+       <div class="h">
+        <div class="box a"></div>
+        <div class="box b"></div>
+       </div>
+        <div class="v">
+            <div class="box c"></div>
+            <div class="box d"></div>
+        </div>
+    </div>
+    <script src="siman-game.js"></script>
+</body>
+</html>

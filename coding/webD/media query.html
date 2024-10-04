@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            color:antiquewhite;
+            background-color: aqua;
+            font-size: 72px;
+            text-align:center;
+            /* display:none; */
+        }
+        @media(max-width:3000px){
+        #box1{
+            display:block;
+            background-color: brown;
+            color: beige;
+        }
+    }
+    @media(min-width:3000px)and(max-width:6000px){
+        #box2{
+            display:block;
+            background-color: rgb(187, 24, 125);
+            color: rgb(232, 232, 35);
+        }
+    }
+    @media(min-width:6000px)and(max-width:8000px){
+        #box3{
+            display:block;
+            background-color: rgb(209, 233, 132);
+            color: rgb(48, 48, 8);
+        }
+    }
+    @media(min-width:8000px){
+        #box4{
+            display:block;
+            background-color: rgb(9, 96, 86);
+            color: rgb(10, 10, 1);
+        }
+    }
+
+    </style>
+</head>
+<body>
+    <div class="box" id="box1">
+    this is iphone 1
+    </div>
+    <div class="box" id="box2">
+        this is iphone 2
+    </div>
+    <div class="box" id="box3">
+            this is iphone 3
+    </div>
+    <div class="box" id="box4">
+                this is iphone 4
+    </div>
+</body>
+</html>

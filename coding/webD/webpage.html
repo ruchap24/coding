@@ -1,0 +1,50 @@
+<!doctype html>
+<!-- this declaration is not an html tag.it is an information to the browser about what document type to expect. a code can be run without using this tag -->
+<!-- wireframes for web pages=
+a wireframe is a rough drawing of what the page should look like. it serves as visual guide while you are writing the html & css. we can create it by using pen paper or using digital whiteboards like excalidraw.com <excalidraw class="com">class</excalidraw>
+NOTE= professional web developers generally work with detailed design mockups of a page, not wireframe. these mockups are often created by UI/UX designers in accordance with standardized design system. -->
+<html>
+    <!-- this tag must always be present -->
+    <head>
+        <title>my first web page</title>
+        <style>
+            #basic{
+                color:blue;
+                background-color: blanchedalmond;
+                float: left;
+                width :100%;
+            }
+            .container{
+                color :brown;
+                background-color: beige;
+                margin: auto;
+                padding: 10%;
+                border : 20px solid palevioletred;
+
+            }
+            .box.container{
+                color :rgb(134, 164, 26);
+                background-color: beige;
+                margin: auto;
+                padding: 10%;
+                border : 20px solid palevioletred;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+       <p id="basic">the p amd span tags are both used to define text in html.<br>
+         p tag defines a paragraph of text and is typically used for longer sections of text that form a distinct block.</p>
+         <p id ="basic1">
+         the span tag defines a small section of text and is typically used for inline styling, such as changing the color of a single word or phrase.</p>
+         <P id ="basic2" class="box">
+        b,i,u,strong,em tag<br>
+        list = 3 types<br>
+        links = a tag is used to create hyperlinks in html the a tag must have an href attribute that specifies url of destination page<b> you can use target attribute to specify where the linked page should be opened,such as in a new tab or window</b> use target="_blank" to open the link into new tab<br>
+        images can be add using img tag & src attribute used to specify url or file path of the image.unsplash.com is good place to find images for free.
+        </p>
+        <a target="_blank" href="https://www.google.com">open google</a>
+
+    </div>
+    </body>
+</html>

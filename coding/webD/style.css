@@ -1,0 +1,66 @@
+/* Reset some default browser styles */
+body, h1, h2, p, img {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+header {
+    background-color: #3498db;
+    color: #fff;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+section {
+    margin: 20px 0;
+}
+
+.past-gatherings {
+    text-align: center;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.gallery img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(164, 16, 16, 0.1);
+}
+
+/* Add more styles as needed */
+
+/* hi file add karanyasathi
+<head>
+<link rel="stylesheet "href="style.css ">
+<head> */
+
+/* alt+shift+ down arrow key = replicate (vs code shortcut) */
+/* <a target="_blank" href="https://www.google.com">open google</a>
+rowspan  colspan     caption   theader   tfooter   tbody
+
+<ul type="square">
+
+
+web.dev
+replit web dev mobile app
+meta name charset
+*/
+/*
+this 3 are core web vitals
+ cls= cummulative layout shift
+lcp= largest contentful page
+fid= first input delay */

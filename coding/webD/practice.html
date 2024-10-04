@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css multicolor website</title>
+    <style>
+        :root{
+            --primary-color:rgb(234, 15, 15);
+            --text-color:rgb(245, 238, 238);
+            --secendary-color:rgb(249, 216, 217);
+        }
+        body{
+            background-color: var(--secendary-color);
+        }
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: 'Calibri, 'Trebuchet MS';
+        }
+        nav{
+            background-color: var(--primary-color);
+            padding:12px 0;
+        }
+        ul li{
+            list-style:none;
+            display:inline;
+            padding:23px;
+            font-weight: bolder;
+            color: var(--text-color);
+        }
+        ul li a{
+            color:var(--text-color);
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+   <header>
+    <nav>
+        <ul>
+            <li><a href="/">home</a></li>
+            <li><a href="/">about</a></li>
+            <li><a href="/">services</a></li>
+            <li><a href="/">contacts</a></li>
+        </ul>
+    </nav>
+   </header>
+</body>
+</html>
